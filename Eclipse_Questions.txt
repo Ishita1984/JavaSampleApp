@@ -1,0 +1,152 @@
+1. What is workspace is eclipse?
+
+-Eclipse defines the notion of workspace
+-There can be several workspaces
+-One instance of eclipse works in single workspace
+-A workspace can handle several projects
+-One workspace = sevral folder
+-One project = one sun folder in workspace.
+-In workspace there's a hidden subdirectory called .metadata which contains version.ini(configuration file),.log file which messages eclipse writes incase of error and lock file.
+
+2. How to check java and maven version?
+
+- in commnad prompt java -version.
+- in commnad prompt mvn -version
+
+3. How to change java version in eclipse?
+
+- in eclipse.ini file add the line before the tag -vmargs
+\jdk\jdk_1.8.0_144\bin\javaw.exe
+
+4. What is perspective in eclipse?
+
+-Perspective is a view which contains collection of toolbars,Project Explorer in the left and Outline in the right and several views at the bottom.
+
+5. How to set the character encoding for java scource files in eclipse?
+
+-Go to Window>preferences>type encoding in the searchbox>Select Text option>Then choose Default encoding UTF-8
+
+6. How to Customize the format of java source files?
+
+-Go to Window>preferences>type format in the searchbox>Click (java>code Style>Formatter)> click Edit>Add prfile name
+
+Then change the tab policy to spaces only from the dropdown instead of tab.
+
+7. How to change java environment for particular project?
+
+-Go to properties of java project>then click java build path>Click Libraries tab>then select the declaration of jdk>click Edit button>then choose right java environment.
+
+8. How to add jdk to the java build path?
+
+-Click installed JRE>then add appropriate jdk
+
+-then in java compiler need to select the appropriate version.
+
+9. How to check the version of the jdk at the workspace level?
+
+-in java complier need to uncheck "Enable project specific settings"
+-then click "configure Workspace settings">then slect the appropriate java version in "compiler compliance level" and also in the configure link in the warning.
+
+10. How to use a class of 2nd to project into 1st project.
+
+-It can be done through "Java Build path"
+
+-Project>Properties>Java Build path>Projects tab>Add Project
+
+11. How to add a source folder to a project?
+
+-Project>Properties>Java Build path>Source tab>Add Source folder
+
+12. Packaging a set of project an in an excutable Jar file.
+
+-Select Project>right click and then click Export>slect Java in the popup window>then select JAR file>then click Next
+
+13. How to run a JAR file in command prompt?
+
+   Java -Jar "ProjectName.jar"
+
+14. How to add a JAR file as an external dependency in the project?
+
+Project>Properties>Java Build path>Libraries Tab>Add Library>Then select User Libraries>then create New>then Add External JAR
+
+15. How to install testng?
+
+Help->Install new Software
+
+But modern way to install features in eclipse using market place.
+
+Help->Eclipse Market place
+
+
+16. What is Quick Access?
+
+Quick Access textbox in the righthand side of the IDE.Quick Access will take us quickly to the feature you need.
+
+17. How are tasks and Bookmark in eclipse?
+
+Tasks are used as reminders of actions, work to do or any other action required by the programmer. 
+Bookmark works as a reminder for the team about an action/work that needs to be done. (Window > Show View > Others >General> Bookmarks)
+
+18. What is Maven?
+
+-Maven is a powerful build tool for Java projects. It is a management and automation tool. It is basically written in Java Language and used to build and manage projects written in C#, Ruby, Scala, and other languages. 
+
+19. How to change default maven repo?
+
+- Windows>Preferences>Search Maven>Click Installations Link>then add new Directory
+- then Click User Settings>change the settings.xml path
+
+20. What is POM.xml?
+
+It's a configuration file for Maven project.
+
+21. How to update java version in Maven?
+
+Add the following code in pom.xml.
+
+<properties>
+  	<maven.complier.target>1.8</maven.complier.target>
+  	<maven.complier.source>1.8</maven.complier.source>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+then need to update project 
+Right click on the project>choose Maven>Update project
+
+22. How to configure the Mven Search engine for dependencies?
+
+-Windows>Preferences>Search Maven>Click Maven link on the root>Check "Download repository index updates on startup".
+
+23. How to add Maven dependecies in the source code?
+
+- Either write the code in pom.xml directly.
+
+Or right click in the project>maven>Add depencies
+
+24. What is javaEE application?
+
+-Typically a web application It has : 
+  - a set of classes, servlets, WS, RS
+  -some staic resources(HTML,CSS,JPEG)
+  -some dynamic pages(JSP)
+  - some javascript files
+  -metadata in xml
+
+JavaEE is not standalone.  It runs in application server.Example of application server: Tomcat,Glassfish,JBoss,Weblogic etc.Eclipse needs to connect to the server.Eclipse needs plugin for each application server.
+
+
+25. Difference between @Ignore vs @Test(enabled = false)
+@Ignore Everything within the class gets disabled including the setup in the class but setup in the parent class gets exceuted.
+@Test(enabled = false) Everything within the class including the setup in the class as well as parent class gets disabled.exceuted.
+
+
+ 
+
+
+
+
+
+
+
+
+
